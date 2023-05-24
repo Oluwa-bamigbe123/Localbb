@@ -1,0 +1,59 @@
+﻿@model LocalBetBiga.Models.Entities.Manager
+@{ Layout = ""; }
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InventorySystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css//create.css"/>
+</head>
+
+@{ ViewData["Title"] = "Delete"; }
+
+
+
+<div class="text-center " style="margin-top: 50px">
+    <h2 class="text-primary">Delete Manager</h2>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Manager Usernamne</th>
+                <th>Manager Email</th>
+             
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+
+
+                <td>@Html.DisplayFor(model => model.UserName)</td>
+                <td>@Html.DisplayFor(model => model.Email)</td>
+
+
+
+                <td>
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Delete" class="btn btn-danger" /> 
+                        <a asp-action="Index" asp-controller="Manager" class="btn btn-success">Back </a>
+                    </form>
+
+                </td>
+
+
+
+
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</div>

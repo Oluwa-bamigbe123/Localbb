@@ -1,0 +1,31 @@
+﻿@model LocalBetBiga.Models.Entities.Category
+
+@{ ViewData["Title"] = "Details"; }
+@{ Layout = ""; }
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InventorySystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/create.css" />
+</head>
+
+
+
+<h3 style="text-align:center">Equipment Details</h3>
+<div class="card justify-content-center text-center">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Category Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+
+    </dl>
+    <a asp-action="Index" asp-controller="Category">Back to List</a>
+</div>

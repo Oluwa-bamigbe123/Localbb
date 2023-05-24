@@ -1,0 +1,91 @@
+﻿@model IEnumerable<LocalBetBiga.Models.Entities.Retrival>
+
+@{ Layout = "_ManagerDashboardLayout"; }
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InventorySystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/Content/FileSaver.js"></script>
+</head>
+
+
+@{ ViewData["Title"] = "Title"; }
+
+<div class="text-center " style="margin-top: 50px">
+    <h2 class="text-primary">Retrival List</h2>
+</div>
+
+
+
+@if (Model.Count() > 0)
+{
+
+    <div class="container">
+        <table class="table" id="dataTable">
+            <thead>
+                <tr>
+                    <th>Agent Name</th>
+                    <th>Name Of Equipment Retrieved</th>
+                    <th>Name Of Agent Re-Assigned To</th>
+                    <th>Date Retrieved</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                <tr>
+                    <td>@obj.NameOfAgent</td>
+                    <td>@obj.NameOfEquipmentRetrieved</td>
+                    @if (obj.NameOfAgentReassignedTo == null)
+                    {
+                        <td><p class="text-danger"> empty </p></td>
+                    }
+                    else
+                    {
+                        <td>@obj.NameOfAgentReassignedTo</td>
+                    }
+
+                    <td>@obj.DateRetrieved</td>
+
+
+
+                    @*<td>
+
+            <a asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-warning">
+                Edit
+            </a>
+        </td>*@
+
+
+
+
+                </tr>
+
+
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+   
+
+
+}
+else
+{
+    <p> Oops No Retrival  Yet</p>
+}
+
+
+
+
+
+

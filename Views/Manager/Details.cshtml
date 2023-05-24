@@ -1,0 +1,59 @@
+﻿@model LocalBetBiga.Models.Entities.Manager
+
+@{ ViewData["Title"] = "Details"; }
+@{ Layout = ""; }
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InventorySystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+
+
+<div class="text-center " style="margin-top: 50px">
+    <h2 class="text-primary">Manager Details</h2>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Manager Username</th>
+                <th>Manager Email </th>
+                <th>Manager Phonenumber</th>
+                <th>Manager Address</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+
+
+                <td>@Html.DisplayFor(model => model.UserName)</td>
+                <td>@Html.DisplayFor(model => model.Email)</td>
+                <td>@Html.DisplayFor(model => model.PhoneNumber)</td>
+                <td>@Html.DisplayFor(model => model.Address)</td>
+
+
+                <td>
+
+                    <a asp-action="Index" asp-controller="Manager" class="btn btn-success">
+                        Back
+                    </a>
+
+                </td>
+
+
+
+
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</div>

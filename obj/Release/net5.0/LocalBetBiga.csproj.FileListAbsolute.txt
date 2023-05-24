@@ -1,0 +1,8 @@
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.csprojAssemblyReference.cache
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.AssemblyInfoInputs.cache
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.AssemblyInfo.cs
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.csproj.CoreCompileInputs.cache
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.RazorAssemblyInfo.cache
+C:\Users\Laptop City\source\repos\LocalBetBiga\obj\Release\net5.0\LocalBetBiga.RazorAssemblyInfo.cs

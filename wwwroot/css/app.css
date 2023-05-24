@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-light {
+    color: #FFA500;
+}
+    .navbar-light .navbar-brand {
+        color: orangered;
+    }
+
+        .navbar-light .navbar-brand:hover, .navbar-light .navbar:focus {
+            color: orangered;
+        }
+    .navbar-light .navbar-nav .nav-link {
+        color: orangered;
+    }
+
+.bg-light{
+    background-color: #fff;
+}
+/* .cards-columns{
+    background-color: #fff;
+    border: #fff;
+} */
+.card {
+    background-color: #fff;
+    position: relative;
+    float: left;
+    border: none;
+    color: orangered;
+}
+
+a {
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.home-text {
+    color: orangered;
+    font-size: xx-large;
+    font-weight: 900;
+}
+/* .new-txt{
+    font-size: 300px;
+} */
+
+.img-size{
+    width: 200px;
+    height: 60px;
+}
+
+.home-img{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+}
+.button {
+    color: orangered;
+}
+.text-home-right {
+    position: absolute;
+    float: left;
+    color: #FFA500;
+    font-size: xx-large;
+    left: 0px;
+    margin: 20px;
+}
+.form-move{
+    position: relative;
+    margin-top: 20px;
+    float: inline-start;
+}
+.btnsub {
+    background-color: orangered;
+    color: #fff;
+}.login-img{
+    width: 350px;
+    height: 350px;
+    margin-top: 25px;
+}
+ .first-div{
+     border:solid;
+     justify-content:center;
+
+ }
+ .header{
+     text-align:center;
+ }
+

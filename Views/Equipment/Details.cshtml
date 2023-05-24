@@ -1,0 +1,60 @@
+﻿@model LocalBetBiga.Models.Entities.Equipments
+
+@{ ViewData["Title"] = "Details"; }
+@{ Layout = ""; }
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InventorySystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/create.css" />
+</head>
+
+
+
+<h3 style="text-align:center">Equipment Details</h3>
+
+    <hr />
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Equipment Type</th>
+                <th>Number In Store</th>
+                <th>Brand</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+
+
+                <td>@Html.DisplayFor(model => model.EquipmentType)</td>
+                <td>@Html.DisplayFor(model => model.NumberInStore)</td>
+                <td>@Html.DisplayFor(model => model.Brand)</td>
+
+
+                <td>
+                   
+                    <a asp-action="Index" asp-controller="Equipment" class="btn btn-success">
+                        Back
+                    </a>
+
+                </td>
+
+
+
+
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
+

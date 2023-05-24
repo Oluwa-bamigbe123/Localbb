@@ -1,0 +1,61 @@
+﻿@using LocalBetBiga.Models.ViewModel
+@using LocalBetBiga.Models.Entities
+@model LocalBetBiga.Models.ViewModel.AssignEquipmentToManagerVM
+
+@{ Layout = "_AdminDashboardLayout";
+    ViewData["pageTitle"] = "Assign Equipment"; }
+
+
+<form method="post" asp-action="AssignEquipment">
+
+    <div class="form-group">
+        @if (ViewBag.Message != null)
+        {
+<p class="text-danger">@ViewBag.Message</p>}
+        <label asp-for="ManagerId" class="control-label">Select Manager</label>
+        <select asp-for="ManagerId" asp-items="@Model.ManagerNameSelectList" class="form-control">
+            <option disabled selected>--Select Manager--</option>
+        </select>
+        <span asp-validation-for="ManagerId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryId" class="control-label">Select Category</label>
+        <select asp-for="CategoryId" asp-items="@Model.CategorySelectList" class="form-control">
+            <option disabled selected>--Select Category--</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EquipmentType" class="control-label">Select Equipment</label>
+        <select asp-for="EquipmentType" asp-items="@Model.EquipmentTypeSelectList" class="form-control">
+            <option disabled selected>--Select Equipment--</option>
+        </select>
+        <span asp-validation-for="EquipmentType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BrandName" class="control-label">Select Brand</label>
+        <select asp-for="BrandName" asp-items="@Model.EquipmentBrandSelectList" class="form-control">
+            <option disabled selected>--Select Brand--</option>
+        </select>
+        <span asp-validation-for="EquipmentType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NumberOfEquipmentAssigned"></label>
+        <input asp-for="NumberOfEquipmentAssigned" />
+        <span asp-validation-for="NumberOfEquipmentAssigned" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="DateAssigned"></label>
+        <input asp-for="DateAssigned" />
+        <span asp-validation-for="DateAssigned" class="text-danger"></span>
+
+    </div>
+
+
+    <br />
+    <input type="submit" class="btn btn-primary" value="ASSIGN" />
+
+</form>

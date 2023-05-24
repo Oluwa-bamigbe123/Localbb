@@ -1,0 +1,33 @@
+﻿<nav id="sidebar">
+    <div class="ratio img-responsive img-circle" style="background-image: url(http://trovacamporella.com/img/trovacamporella-fiat500.png);"></div>
+    <div class="p-4">
+
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a asp-controller="Manager" asp-action="ViewDetails"><span class="fa fa-home mr-3"></span> View Details</a>
+            </li>
+            <li>
+                <a asp-controller="Manager" asp-action="AssignEquipmentToAgent"><span class="fa fa-user mr-3"></span> Assign Equipment</a>
+            </li>
+            <li>
+                <a asp-controller="Manager" asp-action="GetAllAssignedEquipment"><span class="fa fa-user mr-3"></span> View Activity</a>
+            </li>
+            <li>
+                <a asp-controller="Retrival" asp-action="Create"><span class="fa fa-user mr-3"></span> Retrieve Equipment</a>
+            </li>
+            <li>
+                <a asp-controller="Retrival" asp-action="GetAllRetrievedEquipment"><span class="fa fa-user mr-3"></span> View All Retrieved Equipment</a>
+            </li>
+            <li>
+                <a asp-controller="Manager" asp-action="History"><span class="fa fa-user mr-3"></span> View History</a>
+            </li>
+
+
+
+            <li>
+                <a asp-controller="Manager" asp-action="Logout"><span class="fa fa-briefcase mr-3"></span> Logout</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

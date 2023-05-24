@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/dashboardstyle.css">
+    <link rel="stylesheet" href="~/scss/style.scss"/>
+    <link rel="stylesheet" href="~/scss/core/sidebar/sidebar.scss" />
+</head>
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <partial name="_AdminDashboardSideBar" />
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <h2 class="mb-4">@ViewData["pageTitle"]</h2>
+            @RenderBody()
+
+            <!-- Favicon icon -->
+            <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+        </div>
+
+
+    </div>
+
+    <script src="~/js/EquipmentAssign.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/dashboard.js"></script>
+
+</body>
+</html>

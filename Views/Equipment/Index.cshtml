@@ -1,0 +1,93 @@
+﻿@model IEnumerable<LocalBetBiga.Models.Entities.Equipments>
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InventorySystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/create.css" />
+
+</head>
+
+<div class="text-center " style="margin-top: 50px">
+    <h2 class="text-primary">Equipment List</h2>
+</div>
+
+
+
+@if (Model.Count() > 0)
+{
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Equipment Type</th>
+                    <th>Number In Store</th>
+                    <th>Brand</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td>@obj.EquipmentType</td>
+                        <td>@obj.NumberInStore</td>
+                        <td>@obj.Brand</td>
+                        <td>@obj.Category.CategoryName</td>
+
+                        <td>
+
+                            
+                            <a asp-action="Details" asp-route-id="@obj.Id" class="btn btn-success">
+                                Details
+                            </a> 
+
+
+                            <a asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger">
+                                Delete
+                            </a> 
+
+
+                            <a asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-warning">
+                                Edit
+                            </a> 
+                        </td>
+
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+}
+else
+{
+    <p> Oops No Equipment  Yet</p>
+}
+
+
+<div class="text-center">
+  
+    <div class="card-footer foots">
+        <div class="form-group">
+            <a asp-controller="Equipment" asp-action="Create" class="btn btn-success">
+                Create New Equipment
+            </a>
+
+            <a asp-controller="Admin" asp-action="GetAllAssignedEquipment" class="btn btn-success">
+                Return To Dashboard
+            </a>
+
+        </div>
+    </div>
+    </div>
+

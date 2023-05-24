@@ -1,0 +1,14 @@
+﻿body {
+
+}
+.topbar {
+    justify-content: center;
+    color: #0000FF;
+}
+.cardio {
+    align-items: center;    
+}
+.foots {
+    display: flex;
+    justify-content: space-around;
+}

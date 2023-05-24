@@ -1,0 +1,94 @@
+﻿@model IEnumerable<LocalBetBiga.Models.Entities.AdminEquipmentDistribution>
+
+@{ Layout = "_AdminDashboardLayout";
+                 }
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InventorySystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/Content/FileSaver.js"></script>
+</head>
+
+
+@{ ViewData["Title"] = "Title"; }
+
+<div class="text-center " style="margin-top: 50px">
+    <h2 class="text-primary">Activity List</h2>
+</div>
+
+
+
+@if (Model.Count() > 0)
+{
+
+    <div class="container">
+        <table class="table" id="dataTable">
+            <thead>
+                <tr>
+                    <th>Equipment Name</th>
+                    <th>Equipment Brand</th>
+                    <th>Manager Name</th>
+                    <th>Number Of Equipment Assigned</th>
+                    <th>Date Assigned</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                <tr>
+                    <td>@obj.Equipments.EquipmentType</td>
+                    <td>@obj.Equipments.Brand</td>
+                    <td>@obj.Manager.UserName</td>
+                    <td>@obj.NumberOfEquipmentAssigned</td>
+                    <td>@obj.DateAssigned</td>
+
+
+                    @*<td>
+
+            <a asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-warning">
+                Edit
+            </a>
+        </td>*@
+
+
+
+
+                </tr>
+
+
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="text-center">
+
+        <div class="card-footer foots">
+            <div class="form-group">
+                <a asp-action="ExportToExcel" class="btn btn-success">
+                    Export
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+}
+else
+{
+    <p> Oops No Activity  Yet</p>
+}
+
+
+
+
+
+

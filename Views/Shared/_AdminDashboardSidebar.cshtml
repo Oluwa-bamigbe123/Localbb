@@ -1,0 +1,46 @@
+﻿<link rel="stylesheet" href="~/fontawesome-free-5.13.0-web/css/all.css" />
+<nav id="sidebar">
+    <div class="ratio img-responsive" style=   "background-image: url(http://trovacamporella.com/img/trovacamporella-fiat500.png)"></div>
+    <div class="p-4">
+        
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a asp-controller="Equipment" asp-action="Create"><i class="fas fa-plus"></i>&nbsp; Add Equipment</a>
+            </li>
+            <li>
+                <a asp-controller="Equipment" asp-action="index"><i class="fas fa-eye"></i>&nbsp; View Equipment</a>
+            </li>
+            <li>
+                <a asp-controller="Manager" asp-action="Create"><i class="fas fa-user-plus"></i> &nbsp;Add Manager</a>
+            </li>
+            <li>
+                <a asp-controller="Manager" asp-action="Index"><i class="fas fa-address-book"></i>&nbsp; View Managers</a>
+            </li>
+            <li>
+                <a asp-controller="Admin" asp-action="AssignEquipment"><i class="fas fa-clipboard-list"></i>&nbsp; Assign Equipment</a>
+            </li>
+            <li>
+                <a asp-controller="Category" asp-action="Index"><i class="fas fa-eye"></i>&nbsp; View Category</a>
+            </li>
+            <li>
+                <a asp-controller="Category" asp-action="Create"><i class="fas fa-plus"></i>&nbsp; Add Category</a>
+            </li>
+            <li>
+                <a asp-controller="Admin" asp-action="Create"><i class="fas fa-user-plus"></i>&nbsp; Add Admin</a>
+            </li>
+            <li>
+                <a asp-controller="Admin" asp-action="GetAllAssignedEquipment"><i class="fas fa-eye"></i>&nbsp; View  Activity</a>
+            </li>
+            <li>
+                <a asp-controller="Retrival" asp-action="Index"><i class="fas fa-eye"></i>&nbsp; View  Retrivals</a>
+            </li>
+
+
+            <li>
+                <a asp-controller="Admin" asp-action="Logout"><i class="fas fa-sign-out-alt"></i>&nbsp; Logout</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
